@@ -5,7 +5,7 @@
 }
 .navbar .navbar-brand img {
   margin: 0;
-  width: 20%;
+  width: 30%;
 }
 .navbar .collapse .navbar-nav {
   text-align: left;
@@ -33,8 +33,62 @@
   border-radius: 10px;
   border: 0;
   color: #FFFFFF;
-  width: 30%;
+  width: 25%;
   padding: 5px 10px;
+}
+
+.main-container {
+  display: flex;
+  text-align: center;
+  margin: 85px auto;
+}
+.main-container .main-item-text {
+  flex: 2;
+  background-image: url(Logos/plumatenue.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-container .main-item-text h1 {
+  font-family: "Alegreya", serif;
+  font-size: 1.8em;
+  color: #600950;
+  margin: 150px 100px 50px;
+}
+.main-container .main-item-text p {
+  font-size: 0.6em;
+  color: #566573;
+  line-height: 30px;
+  padding: 30px 150px;
+}
+.main-container .main-item-text h3 {
+  margin: 100px auto 10px;
+}
+.main-container .main-item-text input {
+  border: 1px solid #b6b6b6;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  padding: 6px 20px;
+  font-size: 14px;
+  height: 55px;
+}
+.main-container .main-item-text button {
+  background-color: #9B0071;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin: -10px;
+  cursor: pointer;
+  padding: 6px 20px;
+  height: 55px;
+}
+.main-container .main-item-image {
+  flex: 1;
+  margin: 0;
+}
+.main-container .main-item-image img {
+  width: 100%;
 }
 
 body {
