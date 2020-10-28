@@ -40,7 +40,7 @@
 .main-container {
   display: flex;
   text-align: center;
-  margin: 85px auto;
+  margin: 85px auto 0;
 }
 .main-container .main-item-text {
   flex: 2;
@@ -88,6 +88,19 @@
   margin: 0;
 }
 .main-container .main-item-image img {
+  width: 100%;
+}
+
+.container {
+  background-color: #600950;
+  margin: 0 auto;
+  padding: 0;
+}
+.container .carousel-inner .carousel-item {
+  align-content: center;
+  padding: 50px 200px;
+}
+.container .carousel-inner .carousel-item img {
   width: 100%;
 }
 
