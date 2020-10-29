@@ -91,20 +91,83 @@
   width: 100%;
 }
 
-.container {
-  background-color: #600950;
-  margin: 0 auto;
-  padding: 0;
+.compare-article {
+  background-image: url(Logos/uno.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+  justify-items: center;
+  padding: 200px 100px;
 }
-.container .carousel-inner .carousel-item {
-  align-content: center;
-  padding: 50px 200px;
+.compare-article .item-compare {
+  display: block;
+  border-radius: 10px;
+  background-color: #FFFFFF;
 }
-.container .carousel-inner .carousel-item img {
+.compare-article .item-compare .header-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+}
+.compare-article .item-compare .header-footer h3 {
+  color: #008080;
+  font-size: 0.7em;
+}
+.compare-article .item-compare .header-footer h4 {
+  color: #000080;
+  font-size: 0.55em;
+}
+.compare-article .item-compare .header-footer a {
+  font-size: 0.5em;
+  text-decoration: none;
+}
+.compare-article .item-compare .header-footer .heart-shape {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: red;
+}
+.compare-article .item-compare .header-footer .heart-shape:before {
+  position: absolute;
+  bottom: 0px;
+  left: -9px;
+  width: 15px;
+  height: 15px;
+  content: "";
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: red;
+}
+.compare-article .item-compare .header-footer .heart-shape:after {
+  position: absolute;
+  top: -9px;
+  right: 0px;
+  width: 15px;
+  height: 15px;
+  content: "";
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: red;
+}
+.compare-article .item-compare img {
   width: 100%;
 }
 
 body {
+  display: block;
   background-color: #FFFFFF;
   font-size: 30px;
 }
