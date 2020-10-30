@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css?family=Alegreya:900|Open+Sans|Slabo+27px&display=swap");
+.navbar {
+  background-color: #F7F0F6;
+  padding: 10px 15px;
+}
+.navbar .navbar-brand img {
+  margin: 0;
+  width: 30%;
+}
+.navbar .collapse .navbar-nav {
+  text-align: left;
+  color: purple;
+}
+.navbar .collapse .navbar-nav .nav-item {
+  font-size: 0.6em;
+}
+.navbar .collapse .navbar-nav .nav-item .nav-link {
+  color: #600950;
+}
+.navbar .collapse .form-inline {
+  font-size: 0.5em;
+  width: 30%;
+  padding: 0;
+  text-align: auto;
+}
+.navbar .collapse .form-inline input {
+  border: 2px solid #9B0071;
+  padding-left: 0;
+  margin-right: 10px;
+}
+.navbar .collapse .form-inline button {
+  background-color: #9B0071;
+  border-radius: 10px;
+  border: 0;
+  color: #FFFFFF;
+  width: 25%;
+  padding: 5px 10px;
+}
+
+.compare-table {
+  font-size: 0.7em;
+  margin: 200px auto;
+  text-align: center;
+}
+.compare-table .table-head {
+  border: 2px solid black;
+}
+.compare-table .product {
+  border: 2px solid black;
+}
+
+body {
+  display: block;
+  background-color: #FFFFFF;
+  font-size: 30px;
+}
+
+/*# sourceMappingURL=compare.css.map */
