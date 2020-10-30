@@ -58,10 +58,7 @@
   font-size: 0.6em;
   color: #566573;
   line-height: 30px;
-  padding: 30px 150px;
-}
-.main-container .main-item-text h3 {
-  margin: 100px auto 10px;
+  padding: 30px 150px 50px;
 }
 .main-container .main-item-text input {
   border: 1px solid #b6b6b6;
