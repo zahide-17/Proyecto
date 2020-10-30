@@ -184,6 +184,16 @@
   margin-top: 20px;
 }
 
+.trademarks {
+  margin: 50px 0;
+  background-color: palevioletred;
+}
+.trademarks img {
+  position: relative;
+  left: 280px;
+  width: 60%;
+}
+
 body {
   display: block;
   background-color: #FFFFFF;
