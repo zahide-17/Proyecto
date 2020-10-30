@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Alegreya:900|Open+Sans|Slabo+27px&display=swap");
+.navbar {
+  background-color: #F7F0F6;
+  padding: 10px 15px;
+}
+.navbar .navbar-brand img {
+  margin: 0;
+  width: 30%;
+}
+.navbar .collapse .navbar-nav {
+  text-align: left;
+  color: purple;
+}
+.navbar .collapse .navbar-nav .nav-item {
+  font-size: 0.6em;
+}
+.navbar .collapse .navbar-nav .nav-item .nav-link {
+  color: #600950;
+}
+.navbar .collapse .form-inline {
+  font-size: 0.5em;
+  width: 30%;
+  padding: 0;
+  text-align: auto;
+}
+.navbar .collapse .form-inline input {
+  border: 2px solid #9B0071;
+  padding-left: 0;
+  margin-right: 10px;
+}
+.navbar .collapse .form-inline button {
+  background-color: #9B0071;
+  border-radius: 10px;
+  border: 0;
+  color: #FFFFFF;
+  width: 25%;
+  padding: 5px 10px;
+}
+
+.login {
+  margin: 200px auto;
+  color: black;
+}
+.login .signup-form {
+  margin: 0 auto;
+}
+.login .signup-form input {
+  border: 1px solid #b6b6b6;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  padding: 6px 20px;
+  font-size: 14px;
+  height: 55px;
+}
+.login .signup-form button {
+  background-color: #9B0071;
+  color: #fff;
+  border: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin: -10px;
+  cursor: pointer;
+  padding: 6px 20px;
+  font-size: 14px;
+  height: 55px;
+}
+
+body {
+  display: block;
+  background-color: #FFFFFF;
+  font-size: 30px;
+}
+
+/*# sourceMappingURL=list.css.map */
