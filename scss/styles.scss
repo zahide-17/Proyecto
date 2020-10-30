@@ -113,23 +113,116 @@
     }
 }
 
-.container {
-    background-color:$dark-purple;
-    margin: 0 auto;
-    padding: 0;
+.compare-article {
+    background-image: url(Logos/uno.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    justify-items: center;
+    padding: 200px 100px ;
 
-    .carousel-inner {
-        .carousel-item {
-            align-content: center;
-            padding: 50px 200px;
-            img {
-                width: 100%;
+    .item-compare {
+        display: block;
+        border-radius: 10px;
+        background-color: $color-white;
+
+        .header-footer {
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+            padding: 20px 0;
+
+            h3 {
+                color: #008080;
+                font-size: .7em;
             }
+
+            h4 {
+                color: #000080;
+                font-size: .55em;
+            }
+
+            a {
+                font-size: 0.5em;
+                text-decoration: none;
+            }
+
+            .heart-shape{
+                position: relative;
+                width: 15px;
+                height: 15px;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+                background-color: red;
+            }
+
+            .heart-shape:before{
+                position: absolute;
+                bottom: 0px;
+                left: -9px;
+                width: 15px;
+                height: 15px;
+                content: '';
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -o-border-radius: 50%;
+                border-radius: 50%;
+                background-color: red;
+            }
+
+            .heart-shape:after{
+                position: absolute;
+                top: -9px;
+                right: 0px;
+                width: 15px;
+                height: 15px;
+                content: '';
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -o-border-radius: 50%;
+                border-radius: 50%;
+                background-color: red;
+            }
+        }
+
+        img {
+            width: 100%;
         }
     }
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 100px auto;
+
+
+    .container-carousel {
+        flex:2;
+
+        .carousel{
+            width: 65%;
+            margin: auto;
+        }
+
+    }
+
+    .container-vdo {
+        flex:1;
+        margin-top: 20px;
+
+    }
+}
+
 body {
+    display: block;
     background-color: $color-white;
     font-size: 30px;
 }
