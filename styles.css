@@ -184,11 +184,22 @@
 .trademarks {
   margin: 50px 0;
   background-color: palevioletred;
+  width: 100%;
 }
 .trademarks img {
   position: relative;
   left: 280px;
   width: 60%;
+}
+
+.footer {
+  margin-top: 50px;
+  color: #600950;
+  font-size: 0.5em;
+  text-align: center;
+}
+.footer img {
+  width: 5%;
 }
 
 body {
