@@ -78,6 +78,7 @@
 
             @media (max-width: 575px){
                 font-size: 30px;
+                margin: 150px 0 50px;
             }
         }
 
@@ -96,37 +97,56 @@
             }
         }
 
-        input {
-            border: 1px solid #b6b6b6;
-            border-bottom-left-radius: 8px;
-            border-top-left-radius: 8px;
-            padding: 6px 20px;
-            font-size:14px;
-            height: 55px;
-        }
-
         h3 {
             @media (max-width: 575px){
                 font-size:20px;
                 margin-bottom: 20px;
             }
         }
-
-        button {
-            background-color: $color-buttom;
-            font-size:14px;
-            color: #fff;
-            border:none;
-            border-top-right-radius: 8px;
-            border-bottom-right-radius: 8px;
-            margin:-10px;
-            cursor: pointer;
-            padding: 6px 20px;
-            height: 55px;
-
+        .signup-form{
             @media (max-width: 575px){
                 font-size:20px;
-                margin-bottom: 20px;
+                padding-bottom: 20px;
+            }
+
+            input {
+                border: 1px solid #b6b6b6;
+                border-bottom-left-radius: 8px;
+                border-top-left-radius: 8px;
+                padding: 6px 20px;
+                font-size:14px;
+                height: 55px;
+
+                @media (max-width: 575px){
+                    border: 1px solid #b6b6b6;
+                    border-radius:8px;
+                    font-size:14px;
+                    height: 55px;
+                }
+            }
+
+            button {
+                background-color: $color-buttom;
+                font-size:14px;
+                color: #fff;
+                border:none;
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
+                margin:-10px;
+                cursor: pointer;
+                padding: 6px 20px;
+                height: 55px;
+
+                @media (max-width: 575px){
+                    background-color: $color-buttom;
+                    font-size:14px;
+                    color: #fff;
+                    border:none;
+                    border-radius: 8px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                    height: 55px;
+                }
             }
         }
     }
@@ -289,7 +309,7 @@
         width: 60%;
 
         @media (max-width: 575px){
-            left: 100px;
+         left: 60px;
         }
     }
 }

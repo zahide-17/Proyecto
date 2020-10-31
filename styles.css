@@ -63,6 +63,7 @@
 @media (max-width: 575px) {
   .main-container .main-item-text h1 {
     font-size: 30px;
+    margin: 150px 0 50px;
   }
 }
 .main-container .main-item-text p {
@@ -80,7 +81,19 @@
     padding: 0;
   }
 }
-.main-container .main-item-text input {
+@media (max-width: 575px) {
+  .main-container .main-item-text h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .main-container .main-item-text .signup-form {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+}
+.main-container .main-item-text .signup-form input {
   border: 1px solid #b6b6b6;
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
@@ -89,12 +102,14 @@
   height: 55px;
 }
 @media (max-width: 575px) {
-  .main-container .main-item-text h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
+  .main-container .main-item-text .signup-form input {
+    border: 1px solid #b6b6b6;
+    border-radius: 8px;
+    font-size: 14px;
+    height: 55px;
   }
 }
-.main-container .main-item-text button {
+.main-container .main-item-text .signup-form button {
   background-color: #9B0071;
   font-size: 14px;
   color: #fff;
@@ -107,9 +122,15 @@
   height: 55px;
 }
 @media (max-width: 575px) {
-  .main-container .main-item-text button {
-    font-size: 20px;
-    margin-bottom: 20px;
+  .main-container .main-item-text .signup-form button {
+    background-color: #9B0071;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    height: 55px;
   }
 }
 .main-container .main-item-image {
@@ -261,7 +282,7 @@
 }
 @media (max-width: 575px) {
   .trademarks img {
-    left: 100px;
+    left: 60px;
   }
 }
 
