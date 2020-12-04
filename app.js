@@ -39,60 +39,71 @@ for (let i = 0; i < $forms.length; i++) {
   $forms[i].addEventListener("submit", sendEmail);
 }
 
-// Create dynamically the article items
-function createElement(type, classNames) {
-  const element = document.createElement(type);
+/***************Mi codigo*****************************/
 
-  if ("undefined" === typeof classNames) {
-    return element;
+const mainText = document.getElementById("mainText");
+mainText.addEventListener("click", function () {
+  this.style.color = "black";
+})
+
+var Data = function (nameProduct, tradeMark, imgSrc, imgAlt) {
+    this.nameProduct = nameProduct;
+    this.tradeMark = tradeMark;
+    this.imgSrc = imgSrc;
+    this.imgAlt = imgAlt;
+}
+
+function createElements(tag,text) {
+  const element = document.createElement(tag);
+  if(typeof text !== "undefined") {
+    element.innerText = text;
   }
-
-  if ("string" === typeof classNames) {
-    classNames = [classNames];
-  }
-
-  classNames.forEach(function(className){
-    element.classList.add(className);
-  });
-
   return element;
-};
+}
 
-function createHTML() {
-  const article = createElement("article", "item-compare");
-  const div = createElement("div", "header-footer");
-  const links = createElement("div", "header-footer");
-  const h3 = createElement("h3");
-  const h4 = createElement("h4");
-  const img = createElement("img");
-  const a = createElement("a");
-  const strong = createElement("strong");
-  const heart = createElement("a", "heart-shape");
+function createSection (productOne) {
+    var article = document.createElement("article");
+    var firstSection = document.createElement("div");
+    var secondSection = document.createElement("img");
+    var threeSection = document.createElement("div");
 
-  h3.innerText = "Satin Lipstick"
-  h4.innerText = "MAC"
-  img.src = "Logos/labial.jpg";
-  img.alt = "";
-  a.href = "compare.html";
-  strong.innerText = "Compara &dollar; &rarr;";
-  heart.href = "#";
+    var h3 = createElements("h3",productOne.nameProduct);
+    var h4 = createElements("h4",productOne.tradeMark);
 
-  div.appendChild(h3);
-  div.appendChild(h4);
+    var link1 = document.createElement("a");
+    var strong = document.createElement("strong");
+    var link2 = document.createElement("a");
 
-  a.appendChild(strong);
-  links.appendChild(heart);
-  links.appendChild(a);
+    article.className = "item-compare";
+    firstSection.className = "header-footer";
+    secondSection.src = productOne.imgSrc;
+    secondSection.scr = productOne.imgAlt;
+    threeSection.className = "header-footer";
 
-  article.appendChild(div);
-  article.appendChild(img);
-  article.appendChild(links);
+    link1.href = "compare.html";
+    link2.href = "#";
+    link2.className = "heart-shape";
+    strong.innerText = "Compara $";
+    link1.appendChild(strong);
 
-  return article;
-};
+    firstSection.appendChild(h3);
+    firstSection.appendChild(h4);
 
-const section = document.getElementsByClassName("compare-article")[0];
+    threeSection.appendChild(link1);
+    threeSection.appendChild(link2);
 
-for (var i=0;i < 12;i++) {
-  section.appendChild(createHTML());
+    article.appendChild(firstSection);
+    article.appendChild(secondSection);
+    article.appendChild(threeSection);
+
+    return article;
+}
+
+const section = document.getElementById("compareArticle");
+var productOne = new Data("Satin Lipstick","MAC","Logos/labial.jpg","Labial MAC");
+var productTwo = new Data("Cremated Palette","Jeffree Star","Logos/paletaSombras.jpeg", "Sombras de ojos");
+for(var i=0; i<6;i++)
+{
+  section.appendChild(createSection(productOne));
+  section.appendChild(createSection(productTwo));
 }
