@@ -265,6 +265,16 @@
                 border-radius: 50%;
                 background-color: #F8EDF2;
             }
+
+            .heart-shape.otherclass {
+                background-color: red;
+                &:before{
+                    background-color: red;
+                }
+                &:after {
+                    background-color: red;
+                }
+            }
         }
 
         img {

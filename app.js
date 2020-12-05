@@ -79,6 +79,7 @@ function createSection (productOne) {
 
     article.className = "item-compare";
     firstSection.className = "header-footer";
+
     secondSection.src = productOne.imgSrc;
     secondSection.alt = productOne.imgAlt;
     threeSection.className = "header-footer";
@@ -118,15 +119,15 @@ createProduct();
 function colorHeart(){
   var heart = document.createElement("a");
   //heart.href = "";
-  heart.className = "heart-shape";
-  heart.addEventListener("click", function() {
+  heart.className = "heart-shape otherclass";
+  /*heart.addEventListener("click", function() {
         if(this.style.backgroundColor !=="red"){
           heart.style.backgroundColor="red";
         }
         else {
           heart.style.backgroundColor="#F8EDF2";
         }
-  });
+  });*/
 
   return heart;
 }

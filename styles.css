@@ -243,6 +243,15 @@
   border-radius: 50%;
   background-color: #F8EDF2;
 }
+.compare-article .item-compare .header-footer .heart-shape.otherclass {
+  background-color: red;
+}
+.compare-article .item-compare .header-footer .heart-shape.otherclass:before {
+  background-color: red;
+}
+.compare-article .item-compare .header-footer .heart-shape.otherclass:after {
+  background-color: red;
+}
 .compare-article .item-compare img {
   width: 100%;
 }
