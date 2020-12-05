@@ -43,7 +43,11 @@ for (let i = 0; i < $forms.length; i++) {
 
 const mainText = document.getElementById("mainText");
 mainText.addEventListener("click", function () {
-  this.style.color = "black";
+  if(this.style.color !== "black")
+      this.style.color = "black";
+  else
+      this.style.color ="#600950";
+
 })
 
 var Data = function (nameProduct, tradeMark, imgSrc, imgAlt) {
@@ -72,7 +76,6 @@ function createSection (productOne) {
 
     var link1 = document.createElement("a");
     var strong = document.createElement("strong");
-    var link2 = document.createElement("a");
 
     article.className = "item-compare";
     firstSection.className = "header-footer";
@@ -81,8 +84,7 @@ function createSection (productOne) {
     threeSection.className = "header-footer";
 
     link1.href = "compare.html";
-    link2.href = "#";
-    link2.className = "heart-shape";
+
     strong.innerText = "Compara $";
     link1.appendChild(strong);
 
@@ -90,7 +92,7 @@ function createSection (productOne) {
     firstSection.appendChild(h4);
 
     threeSection.appendChild(link1);
-    threeSection.appendChild(link2);
+    threeSection.appendChild(colorHeart());
 
     article.appendChild(firstSection);
     article.appendChild(secondSection);
@@ -106,4 +108,21 @@ for(var i=0; i<6;i++)
 {
   section.appendChild(createSection(productOne));
   section.appendChild(createSection(productTwo));
+}
+/*Modificando el color del corazon */
+
+function colorHeart(){
+  var heart = document.createElement("a");
+  //heart.href = "";
+  heart.className = "heart-shape";
+  heart.addEventListener("click", function() {
+        if(this.style.backgroundColor !=="red"){
+          heart.style.backgroundColor="red";
+        }
+        else {
+          heart.style.backgroundColor="#F8EDF2";
+        }
+  });
+
+  return heart;
 }
