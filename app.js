@@ -100,15 +100,19 @@ function createSection (productOne) {
 
     return article;
 }
+function createProduct () {
+  const section = document.getElementById("compareArticle");
+  var productOne = new Data("Satin Lipstick","MAC","Logos/labial.jpg","Labial MAC");
+  var productTwo = new Data("Cremated Palette","Jeffree Star","Logos/paletaSombras.jpeg", "Sombras de ojos");
+  for(var i=0; i<6;i++)
+  {
+    section.appendChild(createSection(productOne));
+    section.appendChild(createSection(productTwo));
+  }
 
-const section = document.getElementById("compareArticle");
-var productOne = new Data("Satin Lipstick","MAC","Logos/labial.jpg","Labial MAC");
-var productTwo = new Data("Cremated Palette","Jeffree Star","Logos/paletaSombras.jpeg", "Sombras de ojos");
-for(var i=0; i<6;i++)
-{
-  section.appendChild(createSection(productOne));
-  section.appendChild(createSection(productTwo));
 }
+createProduct();
+
 /*Modificando el color del corazon */
 
 function colorHeart(){
