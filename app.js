@@ -80,7 +80,7 @@ function createSection (productOne) {
     article.className = "item-compare";
     firstSection.className = "header-footer";
     secondSection.src = productOne.imgSrc;
-    secondSection.scr = productOne.imgAlt;
+    secondSection.alt = productOne.imgAlt;
     threeSection.className = "header-footer";
 
     link1.href = "compare.html";
