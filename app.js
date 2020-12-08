@@ -119,15 +119,17 @@ createProduct();
 function colorHeart(){
   var heart = document.createElement("a");
   //heart.href = "";
-  heart.className = "heart-shape otherclass";
-  /*heart.addEventListener("click", function() {
-        if(this.style.backgroundColor !=="red"){
-          heart.style.backgroundColor="red";
-        }
-        else {
-          heart.style.backgroundColor="#F8EDF2";
-        }
-  });*/
+  const offState = "heart-shape";
+  const onState = `${offState} otherclass`;
+  heart.className = offState;
+  heart.addEventListener("click", function() {
+    if(this.className === offState) {
+      this.className = onState;
+    }
+    else {
+      this.className = offState;
+    }
+  });
 
   return heart;
 }
