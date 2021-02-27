@@ -8,47 +8,12 @@
           integrity= "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
           crossorigin= "anonymous"
         >
-        <link rel= "stylesheet" type="text/css" href= "styles.css">
+        <link rel= "stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
 
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg fixed-top navbar-light">
-                <a class="navbar-brand" href="#">
-                    <img src="Logos/logo.jpeg" alt="Mundo Axin" />
-                </a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Maquillaje</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="compare.html">Lista de Deseos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="list.html">ofertas</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0 actions justify-content-end">
-                        <input id="addSerch" type="search" placeholder="&iquest;Que deseas buscar&quest;" ></input>
-                        <button id="buttonSerch">Buscar</button>
-                    </form>
-                </div>
-            </nav>
+            {% include 'navbar.html' %}
         </header>
         <main class="main-container">
             <div class="main-item-text ">
@@ -70,7 +35,7 @@
 
             </div>
             <div class="main-item-image">
-                <img src="Logos/face.jpg" alt="Foto artistica" />
+                <img src="{{ url_for('static', filename ='Logos/face.jpg') }}" alt="Foto artistica" />
             </div>
         </main>
 
@@ -104,19 +69,19 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="Logos/publilor.jpg" class="d-block w-100" alt="">
+                            <img src="{{url_for('static', filename ='Logos/publilor.jpg')}}"class="d-block w-100" alt="">
                         </div>
                         <div class="carousel-item">
-                            <img src="Logos/publimac.jpg" class="d-block w-100" alt="">
+                            <img src="{{ url_for('static', filename ='Logos/publimac.jpg')}}" class="d-block w-100" alt="">
                         </div>
                         <div class="carousel-item">
-                            <img src="Logos/publimay.jpg" class="d-block w-100" alt="">
+                            <img src="{{ url_for('static', filename ='Logos/publimay.jpg') }}" class="d-block w-100" alt="">
                         </div>
                         <div class="carousel-item">
-                            <img src="Logos/publirevlon.jpg" class="d-block w-100" alt="">
+                            <img src= "{{ url_for('static', filename ='Logos/publirevlon.jpg')}}" class="d-block w-100" alt="">
                         </div>
                         <div class="carousel-item">
-                            <img src="Logos/publiUrban.jpg" class="d-block w-100" alt="">
+                            <img src="{{ url_for('static', filename ='Logos/publiUrban.jpg')}}" class="d-block w-100" alt="">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -137,7 +102,7 @@
                 <figure>
                     <img src="" alt=""/>
                 </figure>
-                <video controls poster="Logos/make_logo.png">
+                <video controls poster= "{{ url_for('static', filename ='Logos/make_logo.png')}}">
                     <source type="video/webm" src="https://cdn.videvo.net/videvo_files/video/premium/video0036/small_watermarked/computer_code00_preview.webm"/>
                     <source type="video/mp4" src="https://cdn.videvo.net/videvo_files/video/premium/video0036/small_watermarked/computer_code00_preview.mp4"/>
                 </video>
@@ -148,37 +113,19 @@
         </section>
 
         <section class="trademarks">
-            <img src="Logos/BANER MACRCASg.png"/>
+            <img src="{{ url_for('static', filename ='Logos/BANERMARCASg.png') }}"/>
         </section>
 
-       <footer class="footer">
-            <h6>
-                Siguenos en nuestras Redes Sociales
-            </h6>
-            <img
-                src="https://images.vexels.com/media/users/3/140687/isolated/preview/f705441ceeb70b9920ce6c37d80f5603-linkedin-distorsionado-icono-redondo-by-vexels.png"
-                alt="Linkedin"
-            />
-            <img
-                src="https://images.vexels.com/media/users/3/137253/isolated/preview/90dd9f12fdd1eefb8c8976903944c026-icono-de-facebook-logo-by-vexels.png"
-                alt="facebbok"
-            />
-            <img
-                src="https://images.vexels.com/media/users/3/137419/isolated/preview/b1a3fab214230557053ed1c4bf17b46c-icono-de-twitter-logo-by-vexels.png"
-                alt="twiter"
-            />
-            <img
-                src="https://images.vexels.com/media/users/3/137380/isolated/preview/1b2ca367caa7eff8b45c09ec09b44c16-icono-de-instagram-logo-by-vexels.png"
-                alt="instagram"
-            />
-            <h6 class="footer-text">
-                &copy; 2020 Mundo Axin. Marca registrada.
-            </h6>
-        </footer>
+        {% include 'footer.html' %}
 
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script src="app.js"></script>
+        <script>
+            var imagen1 = "{{ url_for('static', filename ='Logos/labial.jpg')}}"
+            var imagen2 = "{{ url_for('static', filename ='Logos/paletaSombras.jpeg')}}"
+            var compare = "/compare"
+        </script>
+        <script src="{{ url_for('static', filename = 'app.js') }}"></script>
     </body>
 </html>

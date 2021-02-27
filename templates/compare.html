@@ -12,44 +12,9 @@
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg fixed-top navbar-light">
-                <a class="navbar-brand" href="#">
-                    <img src="Logos/logo.jpeg" alt="Mundo Axin" />
-                </a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Maquillaje</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="compare.html">Lista de Deseos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="list.html">ofertas</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0 actions justify-content-end">
-                        <input type="search" placeholder="&iquest;Que deseas buscar&quest;" ></input>
-                        <button>Buscar</button>
-                    </form>
-                </div>
-            </nav>
+            {% include 'navbar.html' %}
         </header>
-<!---
+<!--
         <caption>A continuacion te muestro los mejores precios desde el menor a mayor precio</caption>
 -->
         <table class="compare-table">

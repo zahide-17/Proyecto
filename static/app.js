@@ -84,7 +84,7 @@ function createSection (productOne) {
     secondSection.alt = productOne.imgAlt;
     threeSection.className = "header-footer";
 
-    link1.href = "compare.html";
+    link1.href = compare;
 
     strong.innerText = "Compara $";
     link1.appendChild(strong);
@@ -103,8 +103,8 @@ function createSection (productOne) {
 }
 function createProduct () {
   const section = document.getElementById("compareArticle");
-  var productOne = new Data("Satin Lipstick","MAC","Logos/labial.jpg","Labial MAC");
-  var productTwo = new Data("Cremated Palette","Jeffree Star","Logos/paletaSombras.jpeg", "Sombras de ojos");
+  var productOne = new Data("Satin Lipstick","MAC", imagen1,"Labial MAC");
+  var productTwo = new Data("Cremated Palette","Jeffree Star", imagen2, "Sombras de ojos");
   for(var i=0; i<6;i++)
   {
     section.appendChild(createSection(productOne));
